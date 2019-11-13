@@ -1,0 +1,17 @@
+
+<h1>List of all flats</h1>
+<ul>
+<% @flats.each do |flat| %>
+<li  class="card">
+<%= flat.name %>
+<%= flat.address %>
+<%= flat.price_per_night %>
+<%= flat.number_of_guests %>
+</li>
+<li>
+  <%= link_to 'More Info', flat_path(flat), class: "btn btn-primary"  %>
+</li>
+<% end %>
+</ul>
+<img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&auto=format&fit=crop&w=1492&q=80" alt="">
+
